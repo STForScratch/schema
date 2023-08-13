@@ -3,16 +3,41 @@
   "type": "object",
   "properties": {
     "title": {
-      "type": "string",
-      "description": "The title for the feature."
+      "description": "The title for the feature.",
+      "type": "string"
     },
     "description": {
-      "type": "string",
-      "description": "The description for the feature."
+      "description": "The description for the feature.",
+      "type": "string"
+    },
+    "credits": {
+      "description": "The credits for the feature.",
+      "type": "array",
+      "items": [
+        {
+          "description": "A credit for the feature.",
+          "type": "object",
+          "properties": {
+            "username": {
+              "description": "The username for the credit.",
+              "type": "string"
+            },
+            "url": {
+              "description": "The profile url for the credit.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "username",
+            "url"
+          ]
+        }
+      ]
     }
   },
   "required": [
     "title",
-    "description"
+    "description",
+    "credits"
   ]
 }
